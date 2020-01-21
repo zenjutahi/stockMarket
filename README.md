@@ -1,24 +1,6 @@
-# README
+# Ruby Stock Market Platform
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a monolith ruby app, meant to help me re-practice the basics of ruby on rails. All this is meant to help choose the best approach for Skills.Io
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+By: Jeff Njogu
+SkillsIo.com
