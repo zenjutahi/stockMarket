@@ -10,8 +10,11 @@
   </head>
 
   <body>
-    <%= link_to "Stock home", root_path %> |
-    <%= link_to "About Stock", home_about_path %>
-    <%= yield %>
+    <%= render 'home/navbar' %>
+
+      <%= yield %>
+
+    <%= render 'home/footer' %>
+
   </body>
 </html>
