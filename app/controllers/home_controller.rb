@@ -4,9 +4,13 @@ class HomeController < ApplicationController
     if params[:ticker] == ""
       @nothing = "Hey! You forgot to Enter A Symbol"
     elsif params[:ticker]
-      @stock = StockQuote::Stock.quote(params[:ticker])
-      @comapany_data = StockQuote::Stock.company(params[:ticker])
-      @logo = StockQuote::Stock.logo(params[:ticker])
+      begin
+        @stock = StockQuote::Stock.quote(params[:ticker])
+        @comapany_data = StockQuote::Stock.company(params[:ticker])
+        @logo = StockQuote::Stock.logo(params[:ticker])
+      rescue RuntimeError => e
+        @error = "Hey! You must have entered an #{e.message}"
+      end
     end
   end
 

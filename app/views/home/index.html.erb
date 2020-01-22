@@ -1,13 +1,13 @@
 <h1>Stock Market Rials</h1>
 <hr /><br />
 
-<% if @logo %>
+<% if @stock %>
   <div class="container">
     <div class="row">
       <div class="media col-sm">
         <img src="<%= @logo.url %>" class="align-self-start mr-3" style="width: 30px" alt="...">
         <div class="media-body">
-          <h5 class="mt-0"><%= @comapany_data.company_name %></h5>
+          <h5 class="mt-0"><%= @comapany_data.company_name %></h5
           <p>Latest Price: <span><%= @stock.latest_price %></span></p>
           <p>Sector: <span><%= @comapany_data.sector %></span></p>
           <p>Address: <span><%= @comapany_data.address %></span></p>
@@ -24,6 +24,10 @@
     </div>
   </div>
 
+<% end %>
+
+<% if @error %>
+<p><span><%= @error %></span></p>
 <% end %>
 
 <br />
