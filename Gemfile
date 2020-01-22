@@ -19,6 +19,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 # Our sourse for Stock
 gem "stock_quote", '~> 3.0.0'
+# Add binding.pry
+gem 'pry-rails', :group => :development
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
