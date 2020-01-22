@@ -21,6 +21,11 @@ gem 'jbuilder', '~> 2.7'
 gem "stock_quote", '~> 3.0.0'
 # Add binding.pry
 gem 'pry-rails', :group => :development
+# Add Device Gem
+
+gem 'bcrypt', '~> 3.1', '>= 3.1.13'
+
+gem 'devise', '~> 4.7', '>= 4.7.1'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
