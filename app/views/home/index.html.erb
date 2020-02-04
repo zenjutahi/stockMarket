@@ -1,39 +1,41 @@
 <h2>Stock Market Rials</h2>
 <hr /><br />
+<div class="jumbotron">
 
-<%= form_tag root_path, :method => 'POST' do %>
-    <%= text_field_tag 'ticker', nil, placeholder: "
-        Enter Ticker Symbol", size: 50 %>
-    <%= submit_tag 'Lookup' %>
-<% end %>
+  <%= form_tag root_path, :method => 'POST' do %>
+      <%= text_field_tag 'ticker', nil, placeholder: "
+          Enter Ticker Symbol", size: 50 %>
+      <%= submit_tag 'Lookup' %>
+  <% end %>
 
-<br />
+  <br />
 
-<% if @stock %>
-  <div class="container">
-    <div class="row">
-      <div class="media col-sm">
-        <img src="<%= @logo.url %>" class="align-self-start mr-3" style="width: 30px" alt="...">
-        <div class="media-body">
-          <h5 class="mt-0"><%= @comapany_data.company_name %></h5
-          <p>Latest Price: <span><%= @stock.latest_price %></span></p>
-          <p>Sector: <span><%= @comapany_data.sector %></span></p>
-          <p>Address: <span><%= @comapany_data.address %></span></p>
+  <% if @stock %>
+    <div class="container">
+      <div class="row">
+        <div class="media col-sm">
+          <img src="<%= @logo.url %>" class="align-self-start mr-3" style="width: 30px" alt="...">
+          <div class="media-body">
+            <h5 class="mt-0"><%= @comapany_data.company_name %></h5
+            <p>Latest Price: <span><%= @stock.latest_price %></span></p>
+            <p>Sector: <span><%= @comapany_data.sector %></span></p>
+            <p>Address: <span><%= @comapany_data.address %></span></p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% elsif @nothing %>
-  <div class="row">
-    <div class="media col-sm">
-      <div class="media-body">
-        <p><span><%= @nothing %></span></p>
+  <% elsif @nothing %>
+    <div class="row">
+      <div class="media col-sm">
+        <div class="media-body">
+          <p><span><%= @nothing %></span></p>
+        </div>
       </div>
     </div>
-  </div>
 
-<% end %>
+  <% end %>
 
-<% if @error %>
-<p><span><%= @error %></span></p>
-<% end %>
+  <% if @error %>
+  <p><span><%= @error %></span></p>
+  <% end %>
+</div>
